@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why High Performers Are Quietly Replacing Coffee With Ceremonial Cacao</title>
+<style>
+  :root {
+    --cacao: #3b2318;
+    --cacao-light: #6b4433;
+    --cream: #faf3ea;
+    --terracotta: #c1683f;
+    --terracotta-dark: #a8532e;
+    --sage: #6b7a5e;
+    --gold: #b8874f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--cacao);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+  .tag-bar {
+    background: #efe4d3;
+    text-align: center;
+    padding: 8px 12px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #8a7660;
+    text-transform: uppercase;
+  }
+
+  /* Full-bleed hero photo */
+  .hero-photo-wrap { max-width: 480px; margin: 0 auto; overflow: hidden; border-radius: 14px; }
+  .hero-photo {
+    width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; object-position: center 30%; display: block;
+  }
+
+  header.hero { padding: 34px 0 10px; }
+  .kicker {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terracotta-dark);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  h1 { font-size: 2.05em; line-height: 1.25; margin: 0 0 16px; color: var(--cacao); }
+  .subhead { font-size: 1.15em; color: var(--cacao-light); font-style: italic; margin-bottom: 20px; }
+  .byline {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #8a7660;
+    border-top: 1px solid #e2d4bf;
+    border-bottom: 1px solid #e2d4bf;
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+  article p { font-size: 1.06em; margin: 0 0 22px; }
+  article h2 { font-size: 1.35em; margin: 44px 0 18px; color: var(--terracotta-dark); }
+  .drop-cap:first-letter {
+    float: left; font-size: 3.3em; line-height: 0.85;
+    padding-right: 10px; padding-top: 6px;
+    color: var(--terracotta-dark); font-weight: bold;
+  }
+  blockquote {
+    margin: 28px 0; padding: 20px 24px; background: #f2e6d3;
+    border-left: 4px solid var(--terracotta); border-radius: 4px;
+    font-style: italic; font-size: 1.06em;
+  }
+  blockquote cite {
+    display: block; margin-top: 10px; font-style: normal;
+    font-family: Arial, sans-serif; font-size: 12px; color: #8a7660;
+  }
+  .science-box {
+    background: #fff; border: 1px solid #e2d4bf; border-radius: 8px;
+    padding: 24px 26px; margin: 32px 0;
+  }
+  .science-box h3 {
+    margin-top: 0; font-family: Arial, sans-serif; text-transform: uppercase;
+    letter-spacing: 0.5px; font-size: 0.9em; color: var(--sage);
+  }
+  .science-box ul { margin: 0; padding-left: 20px; }
+  .science-box li { margin-bottom: 10px; font-size: 1em; }
+
+  /* Inline photo blocks */
+  figure.inline-photo { margin: 30px 0; }
+  figure.inline-photo img {
+    width: 100%; max-width: 480px; height: auto; border-radius: 10px; display: block; margin: 0 auto;
+  }
+  figure.inline-photo figcaption {
+    font-family: Arial, sans-serif; font-size: 12px; color: #8a7660;
+    text-align: center; margin-top: 8px; font-style: italic;
+  }
+
+  .split-photo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 30px 0; }
+  .split-photo img { width: 100%; height: 170px; object-fit: cover; border-radius: 10px; display: block; }
+
+  .founder-block {
+    display: flex; gap: 20px; align-items: center; margin: 30px 0;
+    background: #fff; border: 1px solid #e2d4bf; border-radius: 10px; padding: 18px;
+  }
+  .founder-block img {
+    width: 100px; height: 100px; object-fit: cover; border-radius: 8px; flex-shrink: 0;
+  }
+  .founder-block p { font-size: 0.98em; margin: 0; }
+
+  .comparison-photo { margin: 34px 0; }
+  .comparison-photo img { width: 100%; max-width: 480px; height: auto; border-radius: 10px; border: 1px solid #e2d4bf; display: block; margin: 0 auto; }
+
+  /* Email capture block */
+  .capture-block {
+    background: linear-gradient(135deg, var(--cacao) 0%, var(--cacao-light) 100%);
+    color: var(--cream);
+    border-radius: 12px;
+    padding: 36px 30px;
+    margin: 46px 0;
+    text-align: center;
+  }
+  .capture-block .tag {
+    font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; color: #e8c9a3; margin-bottom: 10px;
+  }
+  .capture-block h3 {
+    font-size: 1.5em; margin: 0 0 10px; color: #fff;
+  }
+  .capture-block p {
+    font-size: 1em; color: #ecd9c3; margin: 0 auto 22px; max-width: 480px;
+  }
+  .capture-form {
+    display: flex; gap: 10px; max-width: 420px; margin: 0 auto;
+    flex-wrap: wrap; justify-content: center;
+  }
+  .capture-form input[type="email"] {
+    flex: 1 1 240px; padding: 13px 16px; border-radius: 30px; border: none;
+    font-family: Arial, sans-serif; font-size: 0.95em; min-width: 200px;
+  }
+  .capture-form button {
+    background: var(--terracotta); color: #fff; border: none;
+    font-family: Arial, sans-serif; font-weight: 700; letter-spacing: 0.3px;
+    padding: 13px 26px; border-radius: 30px; cursor: pointer; font-size: 0.95em;
+  }
+  .capture-form button:hover { background: var(--terracotta-dark); }
+  .capture-fine {
+    font-family: Arial, sans-serif; font-size: 11px; color: #cbb99f; margin-top: 14px;
+  }
+
+  .product-card {
+    background: var(--cacao); color: var(--cream); border-radius: 10px;
+    padding: 30px 26px; margin: 40px 0; text-align: center;
+  }
+  .product-card img { width: 330px; max-width: 100%; border-radius: 8px; margin-bottom: 18px; }
+  .product-card h3 { font-size: 1.3em; margin: 0 0 8px; color: #fff; }
+  .product-card .price { font-family: Arial, sans-serif; font-size: 0.95em; color: #e8c9a3; margin-bottom: 18px; }
+  .cta-btn {
+    display: inline-block; background: var(--terracotta); color: #fff;
+    font-family: Arial, sans-serif; font-weight: 700; letter-spacing: 0.5px;
+    text-decoration: none; padding: 15px 38px; border-radius: 40px; font-size: 1em;
+  }
+  .cta-btn:hover { background: var(--terracotta-dark); }
+  .product-details { font-family: Arial, sans-serif; font-size: 12.5px; color: #cbb99f; margin-top: 14px; }
+
+  .ingredient-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px;
+    font-family: Arial, sans-serif; font-size: 0.92em; margin: 20px 0;
+  }
+  .ingredient-grid div { padding: 8px 0; border-bottom: 1px solid #e2d4bf; }
+
+  .badge-row {
+    display: flex; align-items: center; gap: 16px; background: #fff;
+    border: 1px solid #e2d4bf; border-radius: 10px; padding: 14px 18px; margin: 22px 0;
+  }
+  .badge-row img { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+  .badge-row p { margin: 0; font-size: 0.95em; }
+
+  .review-grid { display: grid; gap: 18px; margin: 28px 0; }
+  .review-card {
+    background: #fff; border: 1px solid #e2d4bf; border-radius: 8px; padding: 18px 20px;
+  }
+  .review-card .stars { color: var(--gold); font-size: 0.95em; margin-bottom: 6px; }
+  .review-card p { margin: 0 0 8px; font-size: 1em; }
+  .review-card cite { font-style: normal; font-family: Arial, sans-serif; font-size: 12px; color: #8a7660; }
+
+  .faq-item { margin-bottom: 22px; }
+  .faq-item .q { font-weight: bold; color: var(--terracotta-dark); margin-bottom: 6px; }
+
+  .checklist { list-style: none; padding: 0; margin: 24px 0; }
+  .checklist li { padding-left: 30px; position: relative; margin-bottom: 12px; font-size: 1.02em; }
+  .checklist li:before {
+    content: "✓"; position: absolute; left: 0; color: var(--sage); font-weight: bold; font-size: 1.1em;
+  }
+
+  .micro-win {
+    font-family: Arial, sans-serif; font-weight: 700; font-size: 1.02em;
+    color: var(--terracotta-dark); text-align: center; margin: 26px 0;
+    padding: 14px 20px; background: #f2e6d3; border-radius: 8px;
+  }
+
+  .insight-callout {
+    background: var(--cacao); color: var(--cream); text-align: center;
+    margin: 34px 0; padding: 30px 28px; border-radius: 10px;
+    font-size: 1.18em; line-height: 1.5; font-style: italic;
+  }
+  .insight-callout strong {
+    display: block; font-style: normal; font-family: Arial, sans-serif;
+    text-transform: uppercase; letter-spacing: 1px; font-size: 0.55em;
+    color: #e8c9a3; margin-bottom: 12px;
+  }
+
+  .proof-snippet {
+    text-align: center; font-style: italic; font-size: 0.98em;
+    color: var(--cacao-light); margin: 30px auto; max-width: 460px;
+  }
+  .proof-snippet .stars {
+    display: block; color: var(--gold); font-style: normal;
+    font-size: 0.85em; margin-bottom: 6px;
+  }
+
+  .trust-strip {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 22px;
+    font-family: Arial, sans-serif; font-size: 1em; font-weight: 700;
+    color: var(--cacao-light); margin: 36px 0; text-align: center;
+  }
+  .trust-strip span {
+    white-space: nowrap; background: #fff; border: 1px solid #e2d4bf;
+    border-radius: 22px; padding: 11px 20px;
+  }
+
+  .video-embed { max-width: 360px; margin: 34px auto; }
+  .video-embed .frame {
+    position: relative; padding-bottom: 177.78%; height: 0; overflow: hidden;
+    border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+  .video-embed iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+  }
+  .video-embed .caption {
+    font-family: Arial, sans-serif; font-size: 12px; color: #8a7660;
+    text-align: center; margin-top: 10px; font-style: italic;
+  }
+
+  .ritual-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+  .ritual-col { background: #fff; border: 1px solid #e2d4bf; border-radius: 10px; padding: 20px; }
+  .ritual-col-head { font-family: Arial, sans-serif; font-weight: 700; font-size: 1.02em; margin-bottom: 14px; color: var(--terracotta-dark); }
+  .ritual-col ul { list-style: none; padding: 0; margin: 0; }
+  .ritual-col li { display: flex; align-items: center; gap: 12px; font-size: 0.95em; margin-bottom: 14px; }
+  .ritual-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; min-width: 34px; border-radius: 50%;
+    background: var(--cream); border: 1px solid #e2d4bf; font-size: 1.05em; flex-shrink: 0;
+  }
+
+  .sticky-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 999;
+    background: rgba(59, 35, 24, 0.97); padding: 12px 16px 14px;
+    text-align: center; box-shadow: 0 -4px 16px rgba(0,0,0,0.15);
+    transform: translateY(120%); transition: transform 0.35s ease;
+  }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta .cta-btn {
+    display: inline-block; width: 100%; max-width: 360px;
+    padding: 13px 20px; font-size: 0.95em;
+  }
+  .sticky-cta-close {
+    position: absolute; top: 4px; right: 10px; background: none; border: none;
+    color: #cbb99f; font-size: 18px; line-height: 1; cursor: pointer; padding: 4px 8px;
+  }
+
+  footer.disclaimer {
+    margin-top: 50px; padding-top: 20px; border-top: 1px solid #e2d4bf;
+    font-family: Arial, sans-serif; font-size: 11px; color: #a3927b; line-height: 1.6;
+  }
+
+  @media (max-width: 480px) {
+    .split-photo { grid-template-columns: 1fr; }
+    .founder-block { flex-direction: column; text-align: center; }
+    .ritual-compare { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  Headline A/B test ideas (not implemented, current headline kept per user's decision on 2026-07-15):
+  1. "I Quit Coffee For 30 Days. Here's What Happened."
+  2. "Coffee Was Making Me More Anxious Than I Realized."
+-->
+
+<div class="hero-photo-wrap">
+  <img class="hero-photo" src="/images/served-mug.png" alt="A mug of ceremonial cacao freshly poured, surrounded by cacao pods and walnuts">
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">Wellness &amp; Performance</div>
+    <h1>Why High Performers Are Quietly Replacing Coffee With Ceremonial Cacao</h1>
+    <p class="subhead">It's not a detox trend. It's a rethink of where "good energy" actually comes from.</p>
+    <div class="byline">By Chris Ashmore · Updated July 2026 · 7 min read</div>
+  </header>
+
+  <article class="drop-cap">
+
+    <p>Somewhere between the third cup of coffee and the 2 p.m. crash, a growing number of founders, executives, and athletes have quietly swapped their morning brew for something older: ceremonial cacao, the minimally processed, whole bean paste used in cacao ceremonies for centuries across Central and South America.</p>
+
+    <p>Coffee isn't a niche habit: 67% of American adults drank it in the past day, per the National Coffee Association's 2024 survey, the highest rate in over two decades. What's driving the shift isn't nostalgia. It's the kind of energy coffee gives you, sharp, fast, and for a lot of people, wired straight into anxiety. A tight chest before a normal meeting. A 2 p.m. wall no amount of willpower can push through. Many write this off as "just how I am." I used to think that too, before I understood it was chemistry, not personality.</p>
+
+    <blockquote>
+      "I used to wake up already behind. Coffee wasn't something I enjoyed anymore. It was something I needed."
+      <cite>A feeling a lot of people describe, once they stop to think about it</cite>
+    </blockquote>
+
+    <p>Burnout culture didn't invent that feeling, but it normalized it. "Wired and tired" became the default, and coffee stopped being a pleasure and started being a patch over a nervous system running on fumes.</p>
+
+    <h2>How It Started</h2>
+
+    <div class="founder-block">
+      <img src="/images/founders-at-farm.jpg" alt="Jacob and Marco laughing together inside a cacao drying house in Peru">
+      <p>Jacob loved coffee. He just hated what four cups a day did to him: the tight chest, the 2 p.m. crash, the nights his mind wouldn't slow down. He wanted a version of "awake" that didn't cost him his nervous system.</p>
+    </div>
+
+    <blockquote>
+      "I didn't want to quit coffee. I just wanted to stop feeling like I needed it."
+      <cite>Jacob, Co Founder</cite>
+    </blockquote>
+
+    <p>That question took him and his friend Marco to Peru, sitting in cacao ceremony with growers who'd been doing this for generations. Something shifted there, in what they realized energy could feel like. They came home asking one thing: how do you bring this back without losing what makes it work?</p>
+
+    <figure class="inline-photo">
+      <div class="split-photo">
+        <img src="/images/cacao-pods.jpg" alt="Cluster of ripe cacao pods growing on a tree trunk in Peru">
+        <img src="/images/beans-drying.jpg" alt="Cacao beans laid out to dry in the sun on a Peruvian farm">
+      </div>
+      <figcaption>Heirloom cacao, grown and sun dried on small family run farms across Peru.</figcaption>
+    </figure>
+
+    <p>Imagine waking up and not immediately reaching for something to fix how you feel. That's not really a caffeine story. It's a different relationship with your mornings, and it's what the rest of this is about.</p>
+
+    <h2>The Coffee Crash, Explained</h2>
+
+    <p>Coffee's stimulant, caffeine, works by blocking the receptors in your brain that tell you you're tired. That's exactly why it feels so sharp, and why the crash a few hours later feels so rough. Caffeine peaks fast (30–60 minutes) and clears in about 5 hours, which is part of why so many people find themselves reaching for cup after cup just to stay level through the afternoon.</p>
+
+    <div class="insight-callout">
+      <strong>Worth sitting with</strong>
+      Coffee doesn't actually create energy. It temporarily blocks your brain from noticing you're tired.
+    </div>
+
+    <p>That's not a knock on coffee. It's just a different mechanism than most people assume, and once you see it, the 2 p.m. wall makes a lot more sense.</p>
+
+    <div class="proof-snippet">
+      <span class="stars">★★★★★</span>
+      "These are so easy to froth up in the morning, and I love that I don't get that jittery, anxious feeling like I do with coffee." · Tona D., Verified Buyer
+    </div>
+
+    <h2>Why Cacao Feels Different</h2>
+
+    <p>Cacao's primary active compound, theobromine, doesn't work the same way. Rather than blocking those tired signal receptors directly, it's understood to widen blood vessels and improve blood flow, producing a steadier, more physical sense of energy rather than a jolt to the nervous system. It's a gentler mechanism, and it shows up as a gentler feeling: alert, but not wired.</p>
+
+    <div class="science-box">
+      <h3>The Short Version</h3>
+      <ul>
+        <li><strong>Caffeine</strong> blocks adenosine receptors in the brain: fast onset, sharp peak, hard crash, and for many people, a jittery, anxious edge.</li>
+        <li><strong>Theobromine</strong>, cacao's main active compound, is roughly ten times gentler than caffeine, works more through the cardiovascular system, and has a longer, smoother half life, described by researchers as an "alert calm" rather than a jolt.</li>
+        <li><strong>Magnesium</strong>, naturally present in whole cacao, is one of the more well studied minerals for supporting a relaxed nervous system.</li>
+        <li>Cacao also contains trace amounts of <strong>anandamide</strong>, nicknamed the "bliss molecule" for the sense of contentment associated with it.</li>
+      </ul>
+    </div>
+
+    <p class="micro-win">The short version: alert, not wired.</p>
+
+    <p>That's exactly the mechanism Jacob and Marco built their formula around after Peru: heirloom cacao for the theobromine and magnesium, paired with six real mushroom extracts, designed around a steadier kind of energy instead of the spike and crash most people have learned to live with.</p>
+
+    <div class="comparison-photo">
+      <img src="/images/comparison-chart.png" alt="Comparison chart: ceremonial cacao versus coffee versus energy drinks">
+    </div>
+
+    <p>None of this makes cacao a treatment for anxiety. It isn't one, and this isn't medical advice. But the mechanism helps explain a pattern showing up again and again in people who've made the switch: the feeling of being wired seems to ease, even as the sense of being awake stays put.</p>
+
+    <div class="science-box">
+      <h3>Quick Questions, Before We Go Further</h3>
+      <ul>
+        <li><strong>Does it taste weird?</strong> No, it tastes like rich, real drinking chocolate. The mushroom extracts are formulated to disappear into the cacao.</li>
+        <li><strong>Is it expensive?</strong> About $2.35 a serving at 20 servings per order, in the same range as a specialty coffee drink, minus the crash.</li>
+        <li><strong>Will I actually feel anything?</strong> Most people notice something within the first few days: less of the wired, jittery edge, and steadier focus through the afternoon.</li>
+        <li><strong>Is this another wellness fad?</strong> Ceremonial cacao has been used for centuries. What's new is drinking it instead of coffee, not the cacao itself.</li>
+      </ul>
+    </div>
+
+    <div class="mid-cta" style="text-align:center; margin: 30px 0;">
+      <a class="cta-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">Experience Calm Energy →</a>
+    </div>
+
+    <h2>What People Notice After They Switch</h2>
+
+    <p>The pattern shows up consistently in cacao communities and among people who've made the swap: a quieter background hum of anxiety, energy that lasts longer without a hard crash, and better sleep, unsurprising given they're no longer putting a stimulant with such a long half life into their body in the middle of the afternoon. It's not a clinical study, and anxiety has plenty of causes no beverage will fix on its own. But for a lot of people, it's the first time they've been able to separate "my personality" from "my caffeine intake."</p>
+
+    <ul class="checklist">
+      <li>Calmer mornings, without the tight chested, wired feeling</li>
+      <li>Fewer jitters and less afternoon crashing</li>
+      <li>Steadier focus that doesn't spike and drop</li>
+      <li>Easier sleep, since there's no long acting stimulant left in the body by evening</li>
+      <li>Actually looking forward to the ritual, instead of just needing it</li>
+    </ul>
+
+    <figure class="inline-photo">
+      <img src="/images/elemental-hearts.jpg" alt="Two friends sharing a warm mug of cacao by the fire">
+      <figcaption>Slower mornings tend to mean calmer afternoons: friends, focus, and none of the wired feeling.</figcaption>
+    </figure>
+
+    <h2>So What Are People Actually Drinking?</h2>
+
+    <p>Up until now, we've been talking about cacao in general. But if you're wondering what Jacob and Marco actually created after returning from Peru, it's this: Heart Magic, heirloom ceremonial cacao, hand poured into pre portioned hearts, blended with six real mushroom extracts. Not a supplement stacked on top of coffee. A replacement for it.</p>
+
+    <div class="video-embed">
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/yaDFWCbadXI" title="Heart Magic morning ritual" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="caption">Watch the 30 second ritual</div>
+    </div>
+
+    <h2>Why Thousands Are Making The Switch</h2>
+
+    <p>This isn't a niche trend anymore. Cacao communities online are full of the same story: someone quits coffee expecting to feel worse, and instead feels calmer within a week. Over 276 verified five star reviews later, the pattern holds.</p>
+
+    <div class="trust-strip">
+      <span>⭐ 5.0 Average Rating</span>
+      <span>📦 276+ Verified Reviews</span>
+      <span>🔁 Most Customers Reorder</span>
+    </div>
+
+    <p>A few lines pulled straight from real, verified reviews: "helped so much with my anxiety and focus," "the emotional benefits are unmatched," "a genuine game changer for my morning routine." The full reviews, unedited, are just below.</p>
+
+    <h2>Testimonials</h2>
+
+    <figure class="inline-photo">
+      <img src="/images/bliss-drinking.jpg" alt="Woman closing her eyes and smiling while savoring a warm mug of cacao at home">
+      <figcaption>For a lot of people, this is the first "energy drink" that also feels like a moment to themselves.</figcaption>
+    </figure>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"I usually don't love anything on TikTok shop but I'm so glad I found this. It's helped so much with my anxiety and focus."</p>
+        <cite>EdithCH H., Verified Buyer</cite>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"I have been consistently drinking this cacao at least once a day for several months now... the emotional benefits are unmatched. Cacao helps me remain present, grounded, and so full of joy!"</p>
+        <cite>Jeannie J., Verified Buyer</cite>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"I've tried many brands of cacao. Heart Magic is by far the best. Very delicious and uplifting! I'll forever be a fan."</p>
+        <cite>Stephanie H., Verified Buyer</cite>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"I quit coffee last year and have been looking for a morning alternative ever since. Heart Magic gives me the ritual, tastes naturally good, and makes me feel fantastic."</p>
+        <cite>Cory S., Verified Buyer · Former Coffee Fanatic</cite>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"These are so easy to froth up in the morning, and I love that I don't get that jittery, anxious feeling like I do with coffee."</p>
+        <cite>Tona D., Verified Buyer · Previous Coffee Fanatic</cite>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"I'm a self proclaimed chocoholic, and this is the first time I've tasted something that felt like real chocolate, not sugar and filler."</p>
+        <cite>Arlene, Verified Buyer</cite>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"I brought this to a friend's house and she told me afterward she hadn't felt this connected and open in years. That's the effect this has on people."</p>
+        <cite>Felicia N., Verified Buyer</cite>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Absolutely magical! This has been a genuine game changer for my morning routine."</p>
+        <cite>Chris A., Verified Buyer</cite>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"A couple of hearts arrived broken in shipping, but the flavor was so profoundly delicious I didn't even care. I highly recommend Heart Magic."</p>
+        <cite>Mayra A., Verified Buyer</cite>
+      </div>
+    </div>
+
+    <div class="mid-cta" style="text-align:center; margin: 30px 0;">
+      <a class="cta-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">See Why People Switch →</a>
+    </div>
+
+    <h2>Why People Don't Go Back To Coffee</h2>
+
+    <p>Ask around in cacao communities and a theme repeats: people don't usually talk about "giving up" coffee. They talk about not wanting to go back. Not because coffee is evil, plenty of people still enjoy a cup, but because once the wired, anxious edge is gone, most people don't miss it. They keep the ritual. They just stop paying for it with their nervous system.</p>
+
+    <h2>Imagine Your Morning</h2>
+
+    <p>Sunlight through the window, before your phone has a chance to fill the room with everything else. Water heating on the stove. A heart dropped into the mug, frothed until it turns a deep, glossy brown. Five quiet minutes with both hands wrapped around something warm, before you check a single notification. This isn't really about caffeine versus no caffeine. It's about what your morning ritual is quietly training your nervous system to expect, and whether you're selling yourself a feeling, or just a drink.</p>
+
+    <div class="ritual-compare">
+      <div class="ritual-col">
+        <div class="ritual-col-head">☕ The Coffee Morning</div>
+        <ul>
+          <li><span class="ritual-icon">😬</span> Phone in hand before your feet hit the floor</li>
+          <li><span class="ritual-icon">⚡</span> First cup hits fast, mind starts racing</li>
+          <li><span class="ritual-icon">😰</span> Tight chest walking into the first meeting</li>
+          <li><span class="ritual-icon">📉</span> Crash by 2 p.m., so you make another cup</li>
+          <li><span class="ritual-icon">🌙</span> Wired at night, tired all day</li>
+        </ul>
+      </div>
+      <div class="ritual-col">
+        <div class="ritual-col-head">🍫 The Calm Morning</div>
+        <ul>
+          <li><span class="ritual-icon">🌤️</span> A few quiet minutes before the day starts</li>
+          <li><span class="ritual-icon">🔥</span> Warm mug, slow sip, no rush</li>
+          <li><span class="ritual-icon">😌</span> Alert and clear, not wired</li>
+          <li><span class="ritual-icon">📈</span> Energy that actually lasts the afternoon</li>
+          <li><span class="ritual-icon">😴</span> Falls asleep easier, nothing stimulating left in the system</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="proof-snippet">
+      <span class="stars">★★★★★</span>
+      "I quit coffee last year and have been looking for a morning alternative ever since. Heart Magic gives me the ritual, tastes naturally good, and makes me feel fantastic." · Cory S., Verified Buyer
+    </div>
+
+    <h2>Heart Magic Might Be For You If...</h2>
+
+    <ul class="checklist">
+      <li>Coffee makes you anxious, jittery, or leaves your chest a little tight</li>
+      <li>You crash every afternoon, no matter how much you had that morning</li>
+      <li>You love the coffee ritual, just not how it makes you feel afterward</li>
+      <li>You're looking for steadier energy instead of a spike and a wall</li>
+      <li>You want to be more intentional with your mornings, not just caffeinated</li>
+    </ul>
+
+    <h2>Meet Heart Magic</h2>
+
+    <p>Heart Magic sources rare, heirloom cacao from single origin family farms in Peru, hand poured into pre portioned cacao hearts, no chopping, no blender, no mess. Each heart is blended with six real mushroom extracts, whole fruiting bodies, not mycelium grown on grain, and delivers around 200mg of naturally occurring theobromine, with nothing artificial and no refined sugar or fillers.</p>
+
+    <figure class="inline-photo">
+      <img src="/images/og-hero-large.jpg" alt="Hand picking up a Heart Magic cacao heart from an open pouch">
+      <figcaption>One heart, straight from the pouch. No scooping, no blender, no mess.</figcaption>
+    </figure>
+
+    <div class="comparison-photo">
+      <img src="/images/disc-closeup.png" alt="Icon chart of what's inside every Heart Magic heart: heirloom cacao, lion's mane, reishi, chaga, maitake, and golden oyster mushroom">
+    </div>
+
+    <div class="ingredient-grid">
+      <div>✓ Heirloom Peruvian cacao (single origin)</div>
+      <div>✓ Cordyceps, Lion's Mane, Reishi</div>
+      <div>✓ Chaga, Maitake, Golden Oyster</div>
+      <div>✓ ~200mg theobromine per serving</div>
+      <div>✓ Vegan &amp; gluten free</div>
+      <div>✓ Independently tested for heavy metals</div>
+    </div>
+
+    <div class="split-photo">
+      <img src="/images/mushroom-lionsmane.jpg" alt="Lion's Mane mushroom, fluffy and white, growing on a log">
+      <img src="/images/mushroom-goldenoyster.jpg" alt="Golden Oyster mushroom, bright yellow cluster">
+    </div>
+    <div class="split-photo">
+      <img src="/images/mushroom-cordyceps.jpg" alt="Cordyceps mushroom, orange fungi in close up">
+      <img src="/images/mushroom-chaga.jpg" alt="Chaga mushroom chunks, dark and charcoal like">
+    </div>
+
+    <div class="badge-row">
+      <img src="/images/heavy-metals-badge.jpg" alt="Tested for heavy metals badge">
+      <p>Every batch is independently tested for heavy metals before it ships. No guesswork, just documentation.</p>
+    </div>
+
+    <div class="proof-snippet">
+      <span class="stars">★★★★★</span>
+      "I'm a self proclaimed chocoholic, and this is the first time I've tasted something that felt like real chocolate, not sugar and filler." · Arlene, Verified Buyer
+    </div>
+
+    <div class="comparison-photo">
+      <img src="/images/comparison-chart-large.png" alt="Chart comparing traditional hot chocolate, cocoa powder, alkalized cacao powder, mass produced cacao paste, and Heart Magic ceremonial cacao">
+    </div>
+
+    <!-- ===== EMAIL CAPTURE (moved just before the offer, per CRO feedback) ===== -->
+    <div class="capture-block">
+      <div class="tag">Free Guide</div>
+      <h3>Start With The Free Morning Ritual Guide</h3>
+      <p>Get <strong>The Morning Ritual Journal</strong>, a free step by step guide to a five minute morning ritual, plus journal prompts and a 7 day tracker to notice what changes when you slow your mornings down.</p>
+
+      <!--
+        Wired to Klaviyo list "Morning Ritual Journal - Advertorial Leads" (id V6KsyC).
+        Submits go straight to Klaviyo's hosted subscribe endpoint — no backend needed.
+        To auto-deliver the PDF, build a Flow in Klaviyo triggered on "Subscribed to List:
+        Morning Ritual Journal - Advertorial Leads" that emails the guide (template id UH3ENg).
+      -->
+      <form class="capture-form" action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank">
+        <input type="hidden" name="g" value="V6KsyC">
+        <input type="hidden" name="$fields" value="source">
+        <input type="hidden" name="source" value="anxious-energy-advertorial-visual">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Get The Guide</button>
+      </form>
+      <div class="capture-fine">Free. No spam. Unsubscribe anytime.</div>
+    </div>
+    <!-- ===== /EMAIL CAPTURE ===== -->
+
+    <div class="trust-strip">
+      <span>⭐ 276+ Five Star Reviews</span>
+      <span>🌱 Regeneratively Grown</span>
+      <span>🧪 Heavy Metal Tested</span>
+      <span>🚚 Free Shipping $50+</span>
+      <span>❤️ 30 Day Guarantee</span>
+    </div>
+
+    <h2 style="margin-top: 18px;">Ready To Experience A Better Morning?</h2>
+
+    <div class="product-card">
+      <img src="/images/product-hero.jpg" alt="Heart Magic ceremonial cacao hearts">
+      <h3>Heart Magic: Original Blend</h3>
+      <div class="price">20 servings · $47.06 · Rated 5.0 from 276 reviews</div>
+      <div style="font-family: Arial, sans-serif; font-size: 0.92em; color: #ecd9c3; text-align: left; margin: 0 auto 20px; max-width: 380px; line-height: 1.9;">
+        ✓ 20 calm energy mornings, pre portioned and ready<br>
+        ✓ Smooth energy without the crash<br>
+        ✓ 6 real mushroom extracts, zero fillers<br>
+        ✓ Vegan, gluten free, no refined sugar
+      </div>
+      <a class="cta-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">Replace Your Coffee →</a>
+      <div class="product-details">Free shipping on subscriptions and orders over $50 · Cancel anytime after month two · 30 day guarantee</div>
+    </div>
+
+    <div style="font-family: Arial, sans-serif; font-size: 0.92em; margin: 24px 0 40px; padding: 20px 22px; background: #fff; border: 1px solid #e2d4bf; border-radius: 10px;">
+      <div style="font-weight:700; color: var(--terracotta-dark); margin-bottom: 6px; text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.5px;">Most People Subscribe Because...</div>
+      <div class="ingredient-grid">
+        <div>✓ Free shipping, every order</div>
+        <div>✓ Member only perks &amp; discounts</div>
+        <div>✓ Never run out, delivered on your schedule</div>
+        <div>✓ Cancel anytime after month two</div>
+      </div>
+    </div>
+
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+      <div class="q">Does it taste like mushrooms?</div>
+      <p>No. Heart Magic tastes like rich, real drinking chocolate. The mushroom extracts are formulated to disappear into the cacao, no earthy or "mushroom" flavor to speak of.</p>
+    </div>
+    <div class="faq-item">
+      <div class="q">Does it actually give you energy?</div>
+      <p>Yes. Unlike coffee and other caffeinated drinks, cacao's effect comes more from stimulating blood flow than from blocking receptors in the brain. Most people describe it as a more relaxed energy. Dosage matters, so if you're sensitive, start with half a heart and adjust from there.</p>
+    </div>
+    <div class="faq-item">
+      <div class="q">How long does it take to make?</div>
+      <p>About 30 seconds: heat water, drop in a heart, froth, and add maple syrup or your milk of choice if you want it sweeter or creamier. Enjoy.</p>
+    </div>
+    <div class="faq-item">
+      <div class="q">What makes it "ceremonial grade"?</div>
+      <p>Grown on a small, family run farm, single origin, hand poured, and processed with minimal intervention rather than the industrial alkalizing used for most cocoa powder.</p>
+    </div>
+    <div class="faq-item">
+      <div class="q">How many hearts is a full dose?</div>
+      <p>One heart is a full serving, pre portioned so there's no measuring. Some people start with half a heart if they're sensitive to theobromine.</p>
+    </div>
+
+    <h2>Tomorrow Morning</h2>
+
+    <p>Imagine waking up and not immediately reaching for something to fix how you feel. No tight chest before the first meeting. No 2 p.m. wall. Just a warm mug, five quiet minutes, and energy that actually lasts the day, calm enough that you notice the morning instead of rushing through it.</p>
+
+    <p>That's not a caffeine promise. It's what tends to happen once you stop asking a stimulant to do a nervous system's job. A lot of people who've made the switch say some version of the same thing: cacao didn't fix something broken in them. It just gave them their mornings back.</p>
+
+    <div class="mid-cta" style="text-align:center; margin: 40px 0;">
+      <a class="cta-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">Build a Better Morning →</a>
+    </div>
+
+  </article>
+
+  <footer class="disclaimer">
+    This article is sponsored content in partnership with Heart Magic. Individual results vary. These statements have not been evaluated by the Food and Drug Administration. Heart Magic products are not intended to diagnose, treat, cure, or prevent any disease. If you are experiencing ongoing anxiety, please speak with a healthcare provider.
+  </footer>
+
+</div>
+
+<div class="sticky-cta" id="stickyCta">
+  <button type="button" class="sticky-cta-close" id="stickyCtaClose" aria-label="Dismiss">×</button>
+  <a class="cta-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">Experience Calm Energy →</a>
+</div>
+
+<script>
+(function () {
+  var stickyCta = document.getElementById('stickyCta');
+  var closeBtn = document.getElementById('stickyCtaClose');
+  var dismissed = false;
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      dismissed = true;
+      stickyCta.classList.remove('visible');
+    });
+  }
+
+  function checkScroll() {
+    if (dismissed || !stickyCta) return;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
+    if (scrollPercent >= 0.3) {
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+})();
+</script>
+
+</body>
+</html>
