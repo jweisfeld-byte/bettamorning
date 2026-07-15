@@ -39,7 +39,7 @@
   }
 
   /* Full-bleed hero photo */
-  .hero-photo-wrap { max-width: 680px; margin: 0 auto; overflow: hidden; border-radius: 14px; }
+  .hero-photo-wrap { max-width: 480px; margin: 0 auto; overflow: hidden; border-radius: 14px; }
   .hero-photo {
     width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; object-position: center 30%; display: block;
   }
@@ -95,7 +95,7 @@
   /* Inline photo blocks */
   figure.inline-photo { margin: 30px 0; }
   figure.inline-photo img {
-    width: 100%; height: auto; border-radius: 10px; display: block;
+    width: 100%; max-width: 480px; height: auto; border-radius: 10px; display: block; margin: 0 auto;
   }
   figure.inline-photo figcaption {
     font-family: Arial, sans-serif; font-size: 12px; color: #8a7660;
@@ -103,19 +103,19 @@
   }
 
   .split-photo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 30px 0; }
-  .split-photo img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; display: block; }
+  .split-photo img { width: 100%; height: 170px; object-fit: cover; border-radius: 10px; display: block; }
 
   .founder-block {
     display: flex; gap: 20px; align-items: center; margin: 30px 0;
     background: #fff; border: 1px solid #e2d4bf; border-radius: 10px; padding: 18px;
   }
   .founder-block img {
-    width: 130px; height: 130px; object-fit: cover; border-radius: 8px; flex-shrink: 0;
+    width: 100px; height: 100px; object-fit: cover; border-radius: 8px; flex-shrink: 0;
   }
   .founder-block p { font-size: 0.98em; margin: 0; }
 
   .comparison-photo { margin: 34px 0; }
-  .comparison-photo img { width: 100%; height: auto; border-radius: 10px; border: 1px solid #e2d4bf; }
+  .comparison-photo img { width: 100%; max-width: 480px; height: auto; border-radius: 10px; border: 1px solid #e2d4bf; display: block; margin: 0 auto; }
 
   /* Email capture block */
   .capture-block {
@@ -158,7 +158,7 @@
     background: var(--cacao); color: var(--cream); border-radius: 10px;
     padding: 30px 26px; margin: 40px 0; text-align: center;
   }
-  .product-card img { width: 400px; max-width: 100%; border-radius: 8px; margin-bottom: 18px; }
+  .product-card img { width: 330px; max-width: 100%; border-radius: 8px; margin-bottom: 18px; }
   .product-card h3 { font-size: 1.3em; margin: 0 0 8px; color: #fff; }
   .product-card .price { font-family: Arial, sans-serif; font-size: 0.95em; color: #e8c9a3; margin-bottom: 18px; }
   .cta-btn {
@@ -310,22 +310,22 @@
 
   <article class="drop-cap">
 
-    <p>Somewhere between the third cup of coffee and the 2 p.m. crash, a growing number of founders, executives, and athletes have quietly started swapping their morning brew for something older: ceremonial cacao. Not the cocoa powder in your baking cabinet, but the minimally processed, whole bean paste used in cacao ceremonies for centuries across Central and South America.</p>
+    <p>Somewhere between the third cup of coffee and the 2 p.m. crash, a growing number of founders, executives, and athletes have quietly swapped their morning brew for something older: ceremonial cacao, the minimally processed, whole bean paste used in cacao ceremonies for centuries across Central and South America.</p>
 
-    <p>Coffee isn't a niche habit: 67% of American adults drank it in the past day, according to the National Coffee Association's 2024 survey, the highest rate in over two decades. The reason more and more of them are looking elsewhere isn't nostalgia. It's the specific kind of energy coffee gives you, sharp, fast, and for a lot of people, wired straight into anxiety. A tight chest before a normal meeting. Racing thoughts reading a slightly terse email. A 2 p.m. wall that no amount of willpower can push through. Many people write this off as "just how I am." I used to think that about myself too, before I understood it was a chemistry problem, not a personality one.</p>
+    <p>Coffee isn't a niche habit: 67% of American adults drank it in the past day, per the National Coffee Association's 2024 survey, the highest rate in over two decades. What's driving the shift isn't nostalgia. It's the kind of energy coffee gives you, sharp, fast, and for a lot of people, wired straight into anxiety. A tight chest before a normal meeting. A 2 p.m. wall no amount of willpower can push through. Many write this off as "just how I am." I used to think that too, before I understood it was chemistry, not personality.</p>
 
     <blockquote>
       "I used to wake up already behind. Coffee wasn't something I enjoyed anymore. It was something I needed."
       <cite>A feeling a lot of people describe, once they stop to think about it</cite>
     </blockquote>
 
-    <p>Burnout culture didn't invent that feeling, but it definitely normalized it. Somewhere along the way, "wired and tired" became the default setting for anyone trying to keep up, and coffee stopped being a pleasure and started being a patch over a nervous system running on fumes. That's the real reason this shift is happening now: not a new supplement trend, but a lot of people quietly deciding they're done treating exhaustion with more stimulation.</p>
+    <p>Burnout culture didn't invent that feeling, but it normalized it. "Wired and tired" became the default, and coffee stopped being a pleasure and started being a patch over a nervous system running on fumes.</p>
 
     <h2>How It Started</h2>
 
     <div class="founder-block">
       <img src="images/founders-at-farm.jpg" alt="Jacob and Marco laughing together inside a cacao drying house in Peru">
-      <p>Jacob loved coffee. He just hated what four cups a day did to him: the tight chest before meetings, the crash by 2 p.m., the nights his mind wouldn't slow down even though his body was wrecked. He didn't want to quit caffeine. He wanted a version of "awake" that didn't cost him his nervous system.</p>
+      <p>Jacob loved coffee. He just hated what four cups a day did to him: the tight chest, the 2 p.m. crash, the nights his mind wouldn't slow down. He wanted a version of "awake" that didn't cost him his nervous system.</p>
     </div>
 
     <blockquote>
@@ -333,7 +333,7 @@
       <cite>Jacob, Co Founder</cite>
     </blockquote>
 
-    <p>That question took him and his friend Marco to Peru, sitting in cacao ceremony with growers who'd been doing this for generations, long before "wellness" became a category. Something shifted there, not just in how they felt, but in what they realized energy could feel like. They came home asking one thing: how do you bring this back without losing what makes it work? That question turned into a years long obsession, one that would eventually take a very specific shape.</p>
+    <p>That question took him and his friend Marco to Peru, sitting in cacao ceremony with growers who'd been doing this for generations. Something shifted there, in what they realized energy could feel like. They came home asking one thing: how do you bring this back without losing what makes it work?</p>
 
     <figure class="inline-photo">
       <div class="split-photo">
@@ -343,7 +343,7 @@
       <figcaption>Heirloom cacao, grown and sun dried on small family run farms across Peru.</figcaption>
     </figure>
 
-    <p>Here's the part worth sitting with before the chemistry: imagine waking up and not immediately reaching for something to fix how you feel. That's not really a caffeine story. It's a different relationship with your own mornings, and it's what the rest of this is actually about.</p>
+    <p>Imagine waking up and not immediately reaching for something to fix how you feel. That's not really a caffeine story. It's a different relationship with your mornings, and it's what the rest of this is about.</p>
 
     <h2>The Coffee Crash, Explained</h2>
 
