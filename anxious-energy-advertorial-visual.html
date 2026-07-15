@@ -176,10 +176,10 @@
   }
   .product-card img { width: 430px; max-width: 100%; border-radius: 8px; margin-bottom: 16px; }
   .product-card .rating-line {
-    font-family: Arial, sans-serif; font-weight: 700; font-size: 1em;
+    font-family: Arial, sans-serif; font-weight: 700; font-size: 1.15em;
     color: var(--gold); margin-bottom: 10px; letter-spacing: 0.3px;
   }
-  .product-card .rating-line span { color: #fff; margin-left: 4px; }
+  .product-card .rating-line span { color: #fff; margin-left: 6px; font-weight: 700; }
   .product-card h3 { font-size: 1.3em; margin: 0 0 4px; color: #fff; }
   .product-card .product-tagline {
     font-family: Georgia, 'Times New Roman', serif; font-style: italic;
@@ -210,17 +210,25 @@
   }
   .product-details { font-family: Arial, sans-serif; font-size: 12.5px; color: #cbb99f; margin-top: 10px; }
 
-  .bonus-stack {
-    background: rgba(184,135,79,0.15); border: 1px solid rgba(184,135,79,0.45);
-    border-radius: 8px; padding: 14px 18px; margin-bottom: 18px; text-align: left;
+  .included-list {
+    margin-bottom: 20px; text-align: left; max-width: 380px; margin-left: auto; margin-right: auto;
   }
-  .bonus-stack-title {
-    font-family: Arial, sans-serif; font-weight: 700; font-size: 0.82em;
+  .included-list-title {
+    font-family: Arial, sans-serif; font-weight: 700; font-size: 0.8em;
     color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;
-    margin-bottom: 8px; text-align: center;
+    margin-bottom: 6px;
   }
-  .bonus-stack ul { list-style: none; margin: 0; padding: 0; font-family: Arial, sans-serif; font-size: 0.92em; color: #ecd9c3; }
-  .bonus-stack li { padding: 3px 0; }
+  .included-list ul { list-style: none; margin: 0; padding: 0; font-family: Arial, sans-serif; font-size: 0.92em; color: #ecd9c3; line-height: 1.7; }
+  .included-list li { padding: 1px 0; }
+
+  .offer-testimonial {
+    font-family: Georgia, 'Times New Roman', serif; font-style: italic;
+    font-size: 0.98em; color: #fff; margin: 4px 0 16px; line-height: 1.5;
+  }
+  .offer-testimonial cite {
+    display: block; font-style: normal; font-family: Arial, sans-serif;
+    font-size: 0.75em; color: var(--gold); margin-top: 6px; letter-spacing: 0.3px;
+  }
 
   .ingredient-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px;
@@ -717,18 +725,19 @@
         ✓ Ready in 30 seconds<br>
         ✓ Wake up without the coffee crash
       </div>
-      <div class="bonus-stack">
-        <div class="bonus-stack-title">🎁 Free With Every Order</div>
+      <div class="included-list">
+        <div class="included-list-title">Every First Order Includes</div>
         <ul>
-          <li>✓ Free electric frother</li>
+          <li>✓ Electric frother</li>
           <li>✓ Free shipping</li>
-          <li>✓ Free yoga, breathwork &amp; meditation library</li>
+          <li>✓ Yoga, breathwork &amp; meditation access</li>
         </ul>
       </div>
-      <a class="cta-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">Try Heart Magic Risk-Free →</a>
+      <p class="offer-testimonial">"I stumbled across Heart Magic and it crossed all the boxes for me."<cite>— Cory H., Verified Purchase</cite></p>
+      <a class="cta-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">Build A Better Morning →</a>
       <div class="guarantee-box">
-        <div class="guarantee-box-title">🛡️ 30-Day Money-Back Guarantee</div>
-        <div class="guarantee-box-sub">Not for you? Full refund, no questions asked.</div>
+        <div class="guarantee-box-title">Love It Or Get Every Penny Back</div>
+        <div class="guarantee-box-sub">30-day guarantee · No questions asked</div>
       </div>
       <div class="product-details">Free shipping on subscriptions and orders over $50 · Cancel anytime after month two</div>
     </div>
