@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why High Performers Are Quietly Replacing Coffee With Ceremonial Cacao</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <style>
   :root {
     --cacao: #3b2318;
@@ -36,6 +41,16 @@
     letter-spacing: 1.5px;
     color: #8a7660;
     text-transform: uppercase;
+  }
+
+  .site-masthead {
+    display: flex; align-items: center; gap: 10px;
+    max-width: 680px; margin: 0 auto; padding: 18px 20px 0;
+  }
+  .site-masthead-mark { width: 30px; height: 30px; flex-shrink: 0; }
+  .site-masthead-name {
+    font-family: Georgia, 'Times New Roman', serif; font-weight: 700;
+    font-size: 1.2em; color: var(--cacao); letter-spacing: 0.2px;
   }
 
   /* Full-bleed hero photo */
@@ -284,6 +299,26 @@
     position: absolute; top: 4px; right: 10px; background: none; border: none;
     color: #cbb99f; font-size: 18px; line-height: 1; cursor: pointer; padding: 4px 8px;
   }
+  .sticky-offer {
+    display: flex; align-items: center; gap: 12px;
+    max-width: 420px; margin: 0 auto; padding-right: 22px;
+  }
+  .sticky-offer img {
+    width: 46px; height: 46px; object-fit: cover; border-radius: 6px; flex-shrink: 0;
+  }
+  .sticky-offer-info { flex: 1; min-width: 0; text-align: left; font-family: Arial, sans-serif; }
+  .sticky-offer-name {
+    color: #fff; font-weight: 700; font-size: 0.85em; line-height: 1.3;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .sticky-offer-price { color: #e8c9a3; font-size: 0.78em; margin-top: 2px; }
+  .sticky-offer-btn {
+    display: inline-block; background: var(--terracotta); color: #fff;
+    font-family: Arial, sans-serif; font-weight: 700; letter-spacing: 0.3px;
+    text-decoration: none; padding: 12px 20px; border-radius: 30px;
+    font-size: 0.85em; white-space: nowrap; flex-shrink: 0;
+  }
+  .sticky-offer-btn:hover { background: var(--terracotta-dark); }
 
   footer.disclaimer {
     margin-top: 50px; padding-top: 20px; border-top: 1px solid #e2d4bf;
@@ -304,6 +339,20 @@
   1. "I Quit Coffee For 30 Days. Here's What Happened."
   2. "Coffee Was Making Me More Anxious Than I Realized."
 -->
+
+<div class="site-masthead">
+  <svg class="site-masthead-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="50" cy="50" r="48" fill="#3b2318"/>
+    <g stroke="#b8874f" stroke-width="4.5" stroke-linecap="round">
+      <line x1="50" y1="16" x2="50" y2="25"/>
+      <line x1="28.5" y1="22.5" x2="33" y2="29.5"/>
+      <line x1="71.5" y1="22.5" x2="67" y2="29.5"/>
+    </g>
+    <path d="M 27 54 A 23 23 0 0 1 73 54 Z" fill="#c1683f"/>
+    <rect x="15" y="54" width="70" height="5.5" rx="2.75" fill="#faf3ea"/>
+  </svg>
+  <span class="site-masthead-name">Betta Mornings</span>
+</div>
 
 <div class="hero-photo-wrap">
   <img class="hero-photo" src="/images/served-mug.png" alt="A mug of ceremonial cacao freshly poured, surrounded by cacao pods and walnuts">
@@ -697,7 +746,14 @@
 
 <div class="sticky-cta" id="stickyCta">
   <button type="button" class="sticky-cta-close" id="stickyCtaClose" aria-label="Dismiss">×</button>
-  <a class="cta-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">Experience Calm Energy →</a>
+  <div class="sticky-offer">
+    <img src="/images/product-hero.jpg" alt="Heart Magic Ceremonial Cacao">
+    <div class="sticky-offer-info">
+      <div class="sticky-offer-name">Heart Magic Ceremonial Cacao</div>
+      <div class="sticky-offer-price">20 servings · $47.06</div>
+    </div>
+    <a class="sticky-offer-btn" href="https://www.heartmagiccacao.com/products/ceremonial-cacao">Shop Now →</a>
+  </div>
 </div>
 
 <script>
