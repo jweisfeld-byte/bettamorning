@@ -39,6 +39,7 @@ src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
   * { box-sizing: border-box; }
   body {
     margin: 0;
+    padding-top: 34px;
     background: var(--cream);
     color: var(--cacao);
     font-family: Georgia, 'Times New Roman', serif;
@@ -62,7 +63,7 @@ src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
 
   .site-masthead {
     display: flex; align-items: center; gap: 10px;
-    max-width: 680px; margin: 0 auto; padding: 18px 20px 0;
+    max-width: 680px; margin: 0 auto; padding: 18px 20px 0 4px;
   }
   .site-masthead-mark { width: 30px; height: 30px; flex-shrink: 0; }
   .site-masthead-name {
@@ -374,6 +375,53 @@ src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
   }
   .sticky-offer-btn:hover { background: var(--terracotta-dark); }
 
+  .reading-progress {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(250, 243, 234, 0.97);
+    padding: 8px 16px; height: 34px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  }
+  .reading-progress-track {
+    flex: 1; height: 5px; background: #e2d4bf; border-radius: 3px; overflow: hidden;
+  }
+  .reading-progress-fill {
+    height: 100%; width: 0%; background: var(--terracotta); border-radius: 3px;
+  }
+  .reading-progress-label {
+    font-family: Arial, sans-serif; font-size: 11px; font-weight: 700;
+    color: #8a7660; letter-spacing: 0.3px; white-space: nowrap;
+  }
+
+  .exit-overlay {
+    position: fixed; inset: 0; z-index: 1200;
+    background: rgba(59, 35, 24, 0.55);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    opacity: 0; pointer-events: none; transition: opacity 0.25s ease;
+  }
+  .exit-overlay.visible { opacity: 1; pointer-events: auto; }
+  .exit-modal {
+    position: relative; background: var(--cream); border-radius: 14px;
+    max-width: 420px; width: 100%; padding: 34px 26px 26px; text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transform: translateY(14px); transition: transform 0.25s ease;
+  }
+  .exit-overlay.visible .exit-modal { transform: translateY(0); }
+  .exit-modal-close {
+    position: absolute; top: 8px; right: 12px; background: none; border: none;
+    color: #8a7660; font-size: 22px; line-height: 1; cursor: pointer; padding: 4px 8px;
+  }
+  .exit-modal-tag {
+    font-family: Arial, sans-serif; font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--terracotta-dark); font-weight: 700; margin-bottom: 10px;
+  }
+  .exit-modal h3 { font-size: 1.4em; margin: 0 0 10px; color: var(--cacao); }
+  .exit-modal p { font-size: 0.95em; color: var(--cacao-light); margin: 0 auto 20px; max-width: 340px; }
+  .exit-modal-fine {
+    font-family: Arial, sans-serif; font-size: 11px; color: #8a7660; margin-top: 14px;
+  }
+
   footer.disclaimer {
     margin-top: 50px; padding-top: 20px; border-top: 1px solid #e2d4bf;
     font-family: Arial, sans-serif; font-size: 10px; color: #c4b8a4; line-height: 1.6; opacity: 0.7;
@@ -383,6 +431,7 @@ src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
     .split-photo { grid-template-columns: 1fr; }
     .founder-block { flex-direction: column; text-align: center; }
     .ritual-compare { grid-template-columns: 1fr; }
+    .exit-modal { padding: 28px 20px 22px; }
   }
 </style>
 </head>
@@ -393,6 +442,13 @@ src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
   1. "I Quit Coffee For 30 Days. Here's What Happened."
   2. "Coffee Was Making Me More Anxious Than I Realized."
 -->
+
+<div class="reading-progress" id="readingProgress">
+  <span class="reading-progress-label">12 min read</span>
+  <div class="reading-progress-track">
+    <div class="reading-progress-fill" id="readingProgressFill"></div>
+  </div>
+</div>
 
 <div class="site-masthead">
   <svg class="site-masthead-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -405,7 +461,7 @@ src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
     <path d="M 27 54 A 23 23 0 0 1 73 54 Z" fill="#c1683f"/>
     <rect x="15" y="54" width="70" height="5.5" rx="2.75" fill="#faf3ea"/>
   </svg>
-  <span class="site-masthead-name">Betta Mornings</span>
+  <span class="site-masthead-name">Betta Morning</span>
 </div>
 
 <div class="hero-photo-wrap">
@@ -833,6 +889,23 @@ src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
   </div>
 </div>
 
+<div class="exit-overlay" id="exitOverlay">
+  <div class="exit-modal">
+    <button type="button" class="exit-modal-close" id="exitModalClose" aria-label="Close">×</button>
+    <div class="exit-modal-tag">Wait!</div>
+    <h3>Before You Go, Grab This Free</h3>
+    <p>Download <strong>The Morning Ritual Guide</strong> free: a step by step guide to a five minute morning ritual, plus journal prompts and a 7 day tracker.</p>
+    <form class="capture-form" action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank" onsubmit="if(typeof fbq==='function'){fbq('track','Lead');}">
+      <input type="hidden" name="g" value="V6KsyC">
+      <input type="hidden" name="$fields" value="source">
+      <input type="hidden" name="source" value="exit-intent-popup">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Send Me The Guide</button>
+    </form>
+    <div class="exit-modal-fine">No purchase necessary. Unsubscribe anytime.</div>
+  </div>
+</div>
+
 <script>
 (function () {
   var stickyCta = document.getElementById('stickyCta');
@@ -861,6 +934,64 @@ src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
 
   window.addEventListener('scroll', checkScroll, { passive: true });
   checkScroll();
+})();
+
+(function () {
+  var article = document.querySelector('article');
+  var fill = document.getElementById('readingProgressFill');
+  if (!article || !fill) return;
+
+  function updateProgress() {
+    var articleTop = article.getBoundingClientRect().top + window.scrollY;
+    var articleHeight = article.offsetHeight;
+    var viewportHeight = window.innerHeight;
+    var scrollY = window.scrollY || document.documentElement.scrollTop;
+    var denom = Math.max(articleHeight - viewportHeight, 1);
+    var progress = (scrollY - articleTop) / denom;
+    progress = Math.max(0, Math.min(1, progress));
+    fill.style.width = (progress * 100) + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+})();
+
+(function () {
+  var overlay = document.getElementById('exitOverlay');
+  var closeBtn = document.getElementById('exitModalClose');
+  if (!overlay) return;
+  var shown = false;
+
+  function alreadyShownThisSession() {
+    try { return !!sessionStorage.getItem('exitIntentShown'); } catch (e) { return false; }
+  }
+  function markShown() {
+    try { sessionStorage.setItem('exitIntentShown', '1'); } catch (e) {}
+  }
+  function showOverlay() {
+    if (shown || alreadyShownThisSession()) return;
+    shown = true;
+    overlay.classList.add('visible');
+    markShown();
+  }
+  function hideOverlay() {
+    overlay.classList.remove('visible');
+  }
+
+  document.addEventListener('mouseout', function (e) {
+    if (!e.relatedTarget && e.clientY <= 0) {
+      showOverlay();
+    }
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', hideOverlay);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) hideOverlay();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') hideOverlay();
+  });
 })();
 </script>
 
