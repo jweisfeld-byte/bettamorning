@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1173812877188225');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1173812877188225&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why High Performers Are Quietly Replacing Coffee With Ceremonial Cacao</title>
@@ -693,7 +710,7 @@
         To auto-deliver the PDF, build a Flow in Klaviyo triggered on "Subscribed to List:
         Morning Ritual Journal - Advertorial Leads" that emails the guide (template id UH3ENg).
       -->
-      <form class="capture-form" action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank">
+      <form class="capture-form" action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank" onsubmit="if(typeof fbq==='function'){fbq('track','Lead');}">
         <input type="hidden" name="g" value="V6KsyC">
         <input type="hidden" name="$fields" value="source">
         <input type="hidden" name="source" value="anxious-energy-advertorial-visual">
